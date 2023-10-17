@@ -12,6 +12,7 @@ enum Color
 
 class CaixaColorida : public Caixa 
 {
+    friend ostream &operator<<( ostream &, const CaixaColorida & );
 public:
     CaixaColorida( double, double, Color = RED );
 

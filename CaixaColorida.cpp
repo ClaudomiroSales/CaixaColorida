@@ -5,3 +5,10 @@ CaixaColorida::CaixaColorida(double altura, double largura, Color color )
 {
     this->color = color;
 }
+
+ostream &operator<<(ostream &out, const CaixaColorida &caixaColor)
+{
+    out << static_cast< Caixa >( caixaColor );
+    out << "Cor: " << caixaColor.color;
+    out << '\n';
+}
