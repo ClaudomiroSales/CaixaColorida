@@ -3,6 +3,9 @@
 
 #include "Caixa.h"
 
+#include <string>
+using std::string;
+
 enum Color
    {
       RED = 1,
@@ -14,11 +17,13 @@ class CaixaColorida : public Caixa
 {
     friend ostream &operator<<( ostream &, const CaixaColorida & );
 public:
-    CaixaColorida( double, double, Color = RED );
+    CaixaColorida( double = 1, double = 1, double = 1, Color = RED );
 
 private:
 
     Color color;
+
+    string getColor( Color ) const;
 
 };
 
