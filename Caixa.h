@@ -1,8 +1,12 @@
 #ifndef CAIXA_H
 #define CAIXA_H
 
-class Caixa
+#include <ostream>
+using std::ostream;
+
+class Caixa   
 {
+    friend ostream &operator<<( ostream &, const Caixa & );
 public:
     Caixa( double = 1, double = 1, double = 1 );
 
